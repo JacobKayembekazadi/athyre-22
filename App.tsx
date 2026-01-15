@@ -9,6 +9,7 @@ import ChatAssistant from './components/ChatAssistant';
 import RiseCollection from './pages/RiseCollection';
 import Journal from './pages/Journal';
 import GiftCards from './pages/GiftCards';
+import ProductDetail from './pages/ProductDetail';
 import { MOCK_PRODUCTS, JOURNAL_ARTICLES, COLLECTION_CARDS } from './data';
 import { Product, CartItem } from './types';
 import { Instagram, Facebook, Twitter, Youtube } from 'lucide-react';
@@ -219,6 +220,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage onAddToCart={addToCart} />} />
           <Route path="/collection/rise" element={<RiseCollection onAddToCart={addToCart} />} />
+          <Route path="/product/:handle" element={<ProductDetail onAddToCart={addToCart} />} />
           <Route path="/journal" element={<Journal />} />
           <Route path="/gift-cards" element={<GiftCards />} />
         </Routes>
